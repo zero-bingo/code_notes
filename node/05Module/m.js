@@ -21,13 +21,13 @@ console.log(module) */
 } */
 
 // 四、同步加载
-/* let name = 'lg'
-let iTime = new Date()
+// let name = 'lg'
+// let iTime = new Date()
 
-while(new Date() -iTime < 4000) {}
+// while(new Date() -iTime < 4000) {}
 
-module.exports = name
-console.log('m.js被加载导入了') */
+// module.exports = name
+// console.log('m.js被加载导入了')
 
 /* console.log(require.main == module) */
 
