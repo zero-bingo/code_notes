@@ -1,4 +1,5 @@
 const myNew = function (ctor, ...args) {
+    console.log(ctor)
     // 容错判断不止这一种，这里简写了
     if (typeof ctor !== 'function') {
         throw new Error()
