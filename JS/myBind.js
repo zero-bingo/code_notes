@@ -43,7 +43,7 @@ Function.prototype.fakeBind = function (ctx, ...args) {
     const self = this
     // 新的函数
     const fn = function () {
-        // 这个新的函数很简单，新函数的调用对象是实例（说白了就是把新函数当作构造函数调用的）就是调用原来的函数
+        // 这个新的函数很简单，把新函数当作构造函数时直接调用原来的函数
         self.apply(this instanceof self ? this : ctx, args.concat([...arguments]))
     }
     // 原型链对象上的属性不能丢失

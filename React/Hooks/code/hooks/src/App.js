@@ -55,9 +55,14 @@ function useEffect(callback, depsAry) {
   }
 }
 
+// 更高级的state
 function useReducer (reducer, initialState) {
+  // 利用useState 先开辟一片数据管理空间
   const [state, setState] = useState(initialState);
+  // 定义符合redux思想的dispatch 负责分发管理action
   function dispatch (action) {
+    // 根据action的type来更新state并返回 都是符合redux思想的
+    // 只不过这里的reducer由用户来自定义，返回最新的state交给setState来更新，所以核心是useState
     const newState = reducer(state, action);
     setState(newState);
   }
