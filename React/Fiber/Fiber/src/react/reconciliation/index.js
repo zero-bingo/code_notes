@@ -35,7 +35,7 @@ const commitAllWork = fiber => {
        */
       if (item.type === item.alternate.type) {
         /**
-         *  节点类型相同
+         * 节点类型相同
          */
         updateNodeElement(item.stateNode, item, item.alternate)
       } else {
